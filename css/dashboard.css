@@ -68,3 +68,48 @@ h1 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+/* LOGIN */
+.full-log{
+  min-height: 100vh;
+  background: #333333;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.container-log{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.container-log img{
+  width: 55%;
+  margin: auto;
+}
+.title-log {
+  display: block;
+  padding-top: 30px;
+  font-weight: 400;
+}
+.form_input {
+  border: 0px;
+  border-bottom: 1px solid #fff;
+  display: block;
+  width: 70%;
+  margin-bottom: 15px;
+  padding: 10px;
+  margin: auto auto 15px;;
+  color: #fff;
+  background: #333;
+}
+.btn-v{
+  border:0px;
+  padding: 5px 20px;
+  background-color: #26A299;
+  color: #fff;
+}
