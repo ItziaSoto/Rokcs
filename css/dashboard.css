@@ -113,3 +113,22 @@ h1 {
   background-color: #26A299;
   color: #fff;
 }
+
+
+@media (max-width: 576px) {
+  .container-log img{
+    width: 95%;
+  }
+  .form_input {
+    width: 90%;
+  }
+ }
+
+@media (max-width: 768px) { 
+  .container-log img{
+    width: 80%;
+  }
+  .form_input {
+    width: 80%;
+  }
+}
