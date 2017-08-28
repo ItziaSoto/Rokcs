@@ -17,11 +17,12 @@
     </head>
 
     <body>
+        <?php include("upload.php"); ?>
         <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
             <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../img/logo.png" class="img-fluid img-60"></a>
+            <a class="navbar-brand" href="../index.php"><img src="../img/logo.png" class="img-fluid img-60"></a>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -40,7 +41,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-center" href="#">
+                        <a class="nav-link text-center" href="#" data-toggle='modal' data-target='#ModalUpload'>
                             <img src="../img/icon_upload.png" class="img-fluid" style="width: 40%;"><br/>Upload
                         </a>
                     </li>

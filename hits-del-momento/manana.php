@@ -1,10 +1,13 @@
 <?php 
     include_once("../sections/head.php");
+    include("../sections/TrackInfo.php");
 
-    $functions = "
-        <a href='' title='' class='links-funciones'>
+    $functionsEdit = "
+        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
             <i class='fa fa-pencil-square-o fa-lg'></i>
         </a>
+    ";
+    $functionTrash = "        
         <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;'>
             <i class='fa fa-trash-o fa-lg'></i>
         </a>        
@@ -54,7 +57,8 @@
                                 <td>dolor</td>
                                 <td>sit</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <?php echo $functionsEdit; ?>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -66,7 +70,10 @@
                                 <td>adipiscing</td>
                                 <td>elit</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <a href="" title="">
+                                        <?php echo $functionsEdit; ?>
+                                    </a>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -78,7 +85,8 @@
                                 <td>odio</td>
                                 <td>Praesent</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <?php echo $functionsEdit; ?>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -90,7 +98,10 @@
                                 <td>cursus</td>
                                 <td>ante</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <a href="" title="">
+                                        <?php echo $functionsEdit; ?>
+                                    </a>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -102,7 +113,10 @@
                                 <td>Sed</td>
                                 <td>nisi</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <a href="" title="">
+                                        <?php echo $functionsEdit; ?>
+                                    </a>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -114,7 +128,10 @@
                                 <td>Sed</td>
                                 <td>nisi</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <a href="" title="">
+                                        <?php echo $functionsEdit; ?>
+                                    </a>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -126,7 +143,10 @@
                                 <td>Sed</td>
                                 <td>nisi</td>
                                 <td>
-                                    <?php echo $functions; ?>
+                                    <a href="" title="">
+                                        <?php echo $functionsEdit; ?>
+                                    </a>
+                                    <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
                         </tbody>
@@ -159,6 +179,6 @@
                 </nav><!-- Termina Paginacion -->
             </main>
         </div><!-- Cierra Row -->
-    </div><!-- Termina container-fluid -->
-
+    </div><!-- Termina container-fluid -->    
+            
 <?php include_once("../sections/footer.php"); ?>        
