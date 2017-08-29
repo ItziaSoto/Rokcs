@@ -13,6 +13,8 @@
         </a>        
     ";
 ?>
+
+
     <div class="container-fluid">
         <div class="row">
             <nav class="col-sm-3 col-md-3 hidden-xs-down bg-faded sidebar" style="padding-top: 10px;">
@@ -21,12 +23,12 @@
 
             <main class="col-sm-8 offset-sm-4 col-md-9 offset-md-3 pt-3">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                    <div class="col-md-6 col-xs-12 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                         <span class="title-table">HITS DEL MOMENTO | MAÑANA</span>
                     </div>
-                    <div class="col-md-6 p-2 d-flex align-items-center justify-content-end">
+                    <div class="col-md-6 col-12 p-2 d-flex align-items-center justify-content-end">
                         <form class="form-inline mt-2 mt-md-0">
-                            <button class="btn btn-outline-success btn-search my-sm-0" type="submit">
+                            <button class="btn btn-outline-success btn-search my-sm-0" type="submit" title="Buscar">
                                 <i class="fa fa-search fa-2x"></i>
                             </button>
                             <input class="form-control mr-sm-2 input-search form-control-sm" type="text">
@@ -176,7 +178,7 @@
                         <li class="page-item"><a class="page-link" href="#">19</a></li>         
                         <li class="page-item"><a class="page-link" href="#">20</a></li>         
                     </ul>
-                </nav><!-- Termina Paginacion -->
+                </nav><!-- Termina Paginacion-->
             </main>
         </div><!-- Cierra Row -->
     </div><!-- Termina container-fluid -->    

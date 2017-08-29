@@ -1,3 +1,5 @@
+
+
 <div id="accordion" role="tablist" style="width: 90%;">
     <!-- *********** Generos | Daily ******************** -->
     <div class="card">
@@ -495,7 +497,7 @@
                             Hits del Momento
                         </div>
                         <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
-                            <a href="" title="">
+                            <a href="../mac-mini-monitor/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
                             <a href="" title="">
