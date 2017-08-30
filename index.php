@@ -19,7 +19,7 @@
             <div class="row">                
                 <div class="col-md-3 col-sm-1"></div>
                 <div class="col-md-6 col-sm-10 col-md-3 ml-md-auto">
-                    <a href="">
+                    <a href="hits-del-momento/manana.php">
                         <img src="img/logo.png" class="img-fluid logo-login" alt="Novomedia Rocks" />
                     </a>
                     <p class="title-login text-center">
