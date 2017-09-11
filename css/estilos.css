@@ -119,7 +119,7 @@ table thead tr th {
   border-top: none !important; }
 
 table tbody tr:hover {
-  color: #27a29a;
+  color: #ad9d33 !important;
   cursor: pointer; }
 
 .links-funciones, .links-funcionesTR {
@@ -127,7 +127,7 @@ table tbody tr:hover {
   text-decoration: none !important; }
 
 .links-funciones:hover {
-  color: #27a29a; }
+  color: #ad9d33 !important; }
 
 .links-funcionesTR:hover {
   color: red; }
@@ -187,7 +187,7 @@ body {
   background-color: #333333;
   color: #fff;
   font-family: "Raleway", sans-serif !important;
-  padding-top: 70px !important; }
+  padding-top: 150px; }
 
 .border {
   border: 1px solid #00FF40; }
@@ -269,7 +269,7 @@ table tbody tr:hover {
 
 .sidebar {
   position: fixed;
-  top: 85px !important;
+  top: 150px;
   bottom: 0;
   left: 0;
   z-index: 1000;

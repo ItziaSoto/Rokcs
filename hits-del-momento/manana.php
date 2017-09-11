@@ -17,21 +17,21 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-sm-3 col-md-3 hidden-xs-down bg-faded sidebar" style="padding-top: 10px;">
+            <nav class="col-sm-3 col-md-3 hidden-xs-down bg-faded sidebar" >
                 <?php include_once("../sections/sidebar.php") ?>
             </nav>
 
             <main class="col-sm-8 offset-sm-4 col-md-9 offset-md-3 pt-3">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-6 col-xs-12 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                    <div class="col-md-6 col-xs-12 d-flex align-items-center justify-content-start f-12">
                         <span class="title-table">HITS DEL MOMENTO | MAÑANA</span>
                     </div>
                     <div class="col-md-6 col-12 p-2 d-flex align-items-center justify-content-end">
-                        <form class="form-inline mt-2 mt-md-0">
+                        <form class="form-inline">
                             <button class="btn btn-outline-success btn-search my-sm-0" type="submit" title="Buscar">
                                 <i class="fa fa-search fa-2x"></i>
                             </button>
-                            <input class="form-control mr-sm-2 input-search form-control-sm" type="text">
+                            <input class="form-control mr-sm-2 input-search" >
                         </form>
                     </div>
                 </div><!-- Cierra row -->
@@ -72,9 +72,7 @@
                                 <td>adipiscing</td>
                                 <td>elit</td>
                                 <td>
-                                    <a href="" title="">
-                                        <?php echo $functionsEdit; ?>
-                                    </a>
+                                    <?php echo $functionsEdit; ?>
                                     <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
@@ -100,9 +98,7 @@
                                 <td>cursus</td>
                                 <td>ante</td>
                                 <td>
-                                    <a href="" title="">
-                                        <?php echo $functionsEdit; ?>
-                                    </a>
+                                    <?php echo $functionsEdit; ?>
                                     <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
@@ -115,9 +111,7 @@
                                 <td>Sed</td>
                                 <td>nisi</td>
                                 <td>
-                                    <a href="" title="">
-                                        <?php echo $functionsEdit; ?>
-                                    </a>
+                                    <?php echo $functionsEdit; ?>
                                     <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
@@ -130,9 +124,7 @@
                                 <td>Sed</td>
                                 <td>nisi</td>
                                 <td>
-                                    <a href="" title="">
-                                        <?php echo $functionsEdit; ?>
-                                    </a>
+                                    <?php echo $functionsEdit; ?>
                                     <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
@@ -145,9 +137,7 @@
                                 <td>Sed</td>
                                 <td>nisi</td>
                                 <td>
-                                    <a href="" title="">
-                                        <?php echo $functionsEdit; ?>
-                                    </a>
+                                    <?php echo $functionsEdit; ?>
                                     <?php echo $functionTrash; ?>
                                 </td>
                             </tr>
@@ -155,7 +145,7 @@
                     </table>
                 </div><!-- Cierra Table-responsive -->
 
-                <nav aria-label="Page navigation example">
+                 <nav aria-label="Page navigation example">
                     <ul class="pagination">                        
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>

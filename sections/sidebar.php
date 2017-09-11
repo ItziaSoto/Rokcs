@@ -6,14 +6,14 @@
         <div class="list-group">
             <a class="list-group-item" data-toggle="collapse" href="#coll1" aria-expanded="true" aria-controls="coll1" id="head1">
                 <div class="container">
-                    <div class="row justify-content-md-center">
+                    <div class="row">
                         <div class="col col-lg-2 p-2 d-flex align-items-center">
                             <img src="../img/generos.png" alt="" class="img-fluid d-flex img-60">
                         </div>
                         <div class="col-md-8 p-2 d-flex align-items-center">
                             Géneros &#124; Daily
                         </div>
-                        <div class="col col-lg-2 p-2 d-flex align-items-center">
+                        <div class="col col-lg-2 p-2 d-flex align-items-end">
                             <i class="fa fa-angle-down fa-2x"></i>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Hits del Momento
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-end img-tabs">
                             <a href="manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -45,7 +45,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Inglés
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="../pop-ingles/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -63,7 +63,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Español
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="../pop-espanol/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -81,7 +81,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Easy Listening
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="../easy-listening/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -99,7 +99,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             RNB Soul
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="../rnb-soul/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -117,7 +117,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Indie Folk
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="../indie-folk/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -164,7 +164,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Hits del Momento
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -182,7 +182,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Inglés
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -200,7 +200,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Español
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -247,7 +247,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Hits del Momento
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -265,7 +265,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Inglés
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -283,7 +283,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Español
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -330,7 +330,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Hits del Momento
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -348,7 +348,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Inglés
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -366,7 +366,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Español
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -413,7 +413,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Hits del Momento
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -431,7 +431,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Inglés
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -449,7 +449,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Español
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -496,7 +496,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Hits del Momento
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="../mac-mini-monitor/manana.php" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -514,7 +514,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Inglés
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>
@@ -532,7 +532,7 @@
                         <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
                             Pop en Español
                         </div>
-                        <div class="col-md-6 p-2 d-flex align-items-center img-tabs">
+                        <div class="col-md-6 d-flex align-items-center img-tabs">
                             <a href="" title="">
                                 <img src="../img/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
                             </a>

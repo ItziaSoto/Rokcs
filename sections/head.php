@@ -24,7 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="../index.php">
-                <img src="../img/logo.png" class="img-fluid img-60">
+                <img src="../img/logo.png" class="img-fluid" style="width: 70%;">
             </a>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
