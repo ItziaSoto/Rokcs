@@ -1,2 +1,1 @@
-# Rokcs
-Administrador 
+# nmr
