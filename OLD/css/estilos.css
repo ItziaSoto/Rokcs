@@ -1,0 +1,420 @@
+.bg-inverse {
+  background-color: #333333 !important; }
+
+.navbar-inverse .navbar-nav .nav-link:focus,
+.navbar-inverse .navbar-nav .nav-link {
+  border-bottom: 1px solid transparent; }
+
+.navbar-inverse .navbar-nav .nav-link:focus,
+.navbar-inverse .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid #747bbb; }
+
+.modal-content {
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 0 !important; }
+
+.modal-header {
+  border-bottom: 1px solid transparent; }
+
+.modal-footer {
+  border-top: 1px solid transparent; }
+
+.modal {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0; }
+
+/** ----------------------------------------- Modal Track Info -------------------------- */
+#ModalTrackTitle {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 20px; }
+
+.btn-actualiza, .btn-cancela, .btn-cancela2 {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff; }
+
+label {
+  display: inline-block;
+  margin-bottom: 0; }
+
+#FormTrackInfo input {
+  border: none;
+  border-bottom: 2px solid #27a29a;
+  border-radius: 0;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 1px;
+  width: 90%; }
+
+#FormTrackInfo label {
+  font-weight: 500; }
+
+#FormTrackInfo .m-top {
+  margin-top: 50px; }
+
+.btn-actualiza {
+  background-color: #27a29a; }
+
+.btn-cancela {
+  background-color: #626363; }
+
+.btn-cancela2 {
+  background-color: #27a29a; }
+
+/** ----------------------------------------- Modal Upload File -------------------------- */
+.UploadModalTitle {
+  color: #000;
+  text-transform: uppercase; }
+
+#CanvasUpload {
+  border: 2px dashed #27a29a;
+  width: 100% !important;
+  height: 150px !important; }
+
+.txt-drag {
+  color: #333333;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 150px; }
+
+.title-table {
+  font-size: 20px; }
+
+.input-search {
+  border-radius: 0 !important; }
+
+.btn-search {
+  border: none; }
+
+.btn-search {
+  color: #fff; }
+
+.btn-search:hover {
+  background: #333333 !important;
+  cursor: pointer; }
+
+.btn-play {
+  color: #ad9d33; }
+
+table tbody,
+table thead th {
+  text-align: center; }
+
+table thead tr th {
+  border-top: none !important; }
+
+table tbody tr:hover {
+  color: #27a29a;
+  cursor: pointer; }
+
+.links-funciones, .links-funcionesTR {
+  color: #fff;
+  text-decoration: none !important; }
+
+.links-funciones:hover {
+  color: #27a29a; }
+
+.links-funcionesTR:hover {
+  color: red; }
+
+/** Estilos Paginacion */
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid transparent; }
+
+.logo-login {
+  display: block;
+  margin: auto;
+  width: 90%; }
+
+.title-login {
+  margin-top: 20px;
+  font-size: 28px; }
+
+#login_form div input {
+  background-color: transparent;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #fff !important;
+  padding-left: 25px;
+  color: #fff; }
+
+#login_form div input::placeholder {
+  color: #fff; }
+
+.btn-login {
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  background-color: #27a29a;
+  color: #fff;
+  margin-top: 30px;
+  cursor: pointer; }
+
+.forgot-pass {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px; }
+
+.forgot-pass:hover {
+  color: #fff; }
+
+.list-login {
+  font-size: 12px; }
+
+body {
+  padding-top: 50px;
+  background-color: #333333;
+  color: #fff;
+  font-family: "Raleway", sans-serif !important;
+  padding-top: 70px !important; }
+
+.border {
+  border: 1px solid #00FF40; }
+
+.pad0 {
+  padding: 0; }
+
+.img-100 {
+  width: 100% !important; }
+
+.img-70 {
+  width: 70% !important; }
+
+.img-60 {
+  width: 60% !important; }
+
+.img-50 {
+  width: 50% !important; }
+
+.img-40 {
+  width: 40% !important; }
+
+.f-12 {
+  font-size: 12px; }
+
+.title-table {
+  font-size: 20px; }
+
+.input-search {
+  border-radius: 0 !important; }
+
+.btn-search {
+  border: none; }
+
+.btn-search {
+  color: #fff; }
+
+.btn-search:hover {
+  background: #62b0a9;
+  cursor: pointer; }
+
+.btn-play {
+  color: #ad9d33; }
+
+table tbody,
+table thead th {
+  text-align: center; }
+
+table thead tr th {
+  border-top: none !important; }
+
+table tbody tr:hover {
+  color: #27a29a;
+  cursor: pointer; }
+
+.links-funciones, .links-funcionesTR {
+  color: #fff;
+  text-decoration: none !important; }
+
+.links-funciones:hover {
+  color: #27a29a; }
+
+.links-funcionesTR:hover {
+  color: red; }
+
+/** Estilos Paginacion */
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid transparent; }
+
+.bg-faded {
+  background-color: #333333; }
+
+.sidebar {
+  position: fixed;
+  top: 85px !important;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: none; }
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0; }
+
+.sidebar .nav {
+  margin-bottom: 20px; }
+
+.sidebar .nav-item {
+  width: 100%; }
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0; }
+
+.sidebar .nav-link {
+  border-radius: 0; }
+
+/* Dashboard */
+.placeholders {
+  padding-bottom: 3rem; }
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: transparent !important;
+  border: none;
+  border-radius: none;
+  border-top: 2px solid #333333; }
+
+.list-group-item {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.125); }
+
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; }
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.list-group a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+.list-group-item img {
+  width: 12%; }
+
+#botones_agrega_elimina {
+  background-color: #9194c9;
+  border-top: 2px solid #333333;
+  border-botttom: 2px solid #333333; }
+
+.img-tabs {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important; }
+
+/** Item 1 - Generos Daily */
+#head1 {
+  background-color: #ad9d33;
+  padding: 0; }
+
+.daily-tabs {
+  background-color: rgba(173, 157, 51, 0.7);
+  border-top: 2px solid #333333; }
+
+/** Item 2 - Select VIP */
+#head2 {
+  background-color: #bbad56;
+  padding: 0; }
+
+.vip-tabs {
+  background-color: rgba(187, 173, 86, 0.7);
+  border-top: 2px solid #333333; }
+
+/** Item 3 - Estacionamiento | Parking */
+#head3 {
+  background-color: #ccbd7c;
+  padding: 0; }
+
+.parking-tabs {
+  background-color: rgba(204, 189, 124, 0.7);
+  border-top: 2px solid #333333; }
+
+/** Item 4 - Temporalidad */
+#head4 {
+  background-color: #8ac1bc;
+  padding: 0; }
+
+.tempo-tabs {
+  background-color: rgba(138, 193, 188, 0.7);
+  border-top: 2px solid #333333; }
+
+/** Item 5 - Spots */
+#head5 {
+  background-color: #62b0a9;
+  padding: 0; }
+
+.spots-tabs {
+  background-color: rgba(98, 176, 169, 0.7);
+  border-top: 2px solid #333333; }
+
+/** Item 6 - Mac Mini Monitor */
+#head6 {
+  background-color: #27a29a;
+  padding: 0; }
+
+.mac-tabs {
+  background-color: rgba(39, 162, 154, 0.7);
+  border-top: 2px solid #333333; }
+
+/*# sourceMappingURL=estilos.css.map */
