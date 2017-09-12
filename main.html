@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico">
+        <title>Novomedia Rocks</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/estilos.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+    </head>
+
+
+    <body>
+        <!-- =====================================
+            Modal Upload 
+        -->
+        <div class="modal fade" id="ModalUpload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-start" style="padding-bottom: 0 !important;">
+                        <span class="UploadModalTitle">
+                            Subir Archivos
+                        </span>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="container pad0">
+                            <span class="txt-drag">Arrastra tu archivo aqui</span>
+                            <div id="CanvasUpload">
+                                
+                            </div>
+                            <div class="dz-message" data-dz-message>
+                                
+                            </div>
+                        </div>
+
+                        <div class="text-right"><br>
+                            <button type="button" class="btn btn-sm btn-cancela2" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Termina Moal Upload -->
+
+
+        <!-- =======================================
+            Modal Track Info 
+        -->
+        <div class="modal fade" id="ModalTrack" tabindex="-1" role="dialog" aria-labelledby="ModalTrack" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <span class="modal-title" id="ModalTrackTitle">
+                            Información del Track
+                        </span>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                    </div>
+
+                    <div class="modal-body" style="color: #000;">
+                        <div class="container-fluid">
+                            <form id="FormTrackInfo" method="POST">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label><br>
+                                    <input type="text" class="form-control pull-right" id="nombre" value="Don't Stop The Music">                            
+                                </div>
+                                <div class="form-group m-top">
+                                    <label for="artista">Artista</label><br>
+                                    <input type="text" class="form-control pull-right" id="artista" value="Rihanna">
+                                </div>
+                                <div class="form-group m-top">
+                                    <label for="album">Álbum</label><br>
+                                    <input type="text" class="form-control pull-right" id="album" value="Good Girl Gone Bad Reloaded">
+                                </div>
+                                <div class="form-group m-top text-right">
+                                    <button type="button" class="btn btn-actualiza btn-sm" form="FormTrackInfo">Actualizar</button>
+                                    <button type="button" class="btn btn-cancela btn-sm" data-dismiss="modal">Cancelar</button>
+                                </div>                     
+                            </form>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div><!-- termina Moal Track Info-->
+
+
+        <!-- ===========================================
+                Modal Agrega Lista
+        -->
+        <div class="modal fade" id="ModalAgrega" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-start" style="padding-bottom: 0 !important;">
+                        <span class="UploadModalTitle">
+                            Agregar Lista
+                        </span>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                    </div>
+                    
+                    <div class="modal-body" style="color: #000;">
+                        <div class="container pad0">
+                            <div class="form">
+                                <form action="" method="POST" accept-charset="utf-8">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label>Lista: </label>
+                                            <input type="text" name="" value="" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="col">
+                                            <label>Categoría: </label>
+                                            <input type="text" name="" value="" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="text-right"><br>
+                            <button type="button" class="btn btn-sm btn-cancela2" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Termina Modal Agrega Lista -->
+
+
+        <!-- ===========================================
+                Modal Confirma Eliminar
+        -->
+        <div class="modal fade" id="ModalConfirmaEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 100px;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 30px 20px;">
+                    <div class="modal-header d-flex justify-content-center" style="padding-bottom: 0 !important;">
+                        <span class="UploadModalTitle">
+                            ¿Deseas Eliminar esta canción de la Biblioteca?
+                        </span>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="container pad0">                            
+                            <form action="" method="POST" accept-charset="utf-8">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-center">     
+                                        <button type="button" class="btn btn-delete-acepta btn-sm">Aceptar</button>
+                                    </div>
+                                    <div class="col d-flex justify-content-center">                                        
+                                        <button type="button" class="btn btn-delete-cancela btn-sm" data-dismiss="modal">Cancelar</button>
+                                    </div>
+                                </div>
+                            </form>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Termina Modal Agrega Lista -->
+
+
+        <!-- ========================================
+                    Navbar 
+        -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="">
+                <img src="images/logo.png" class="img-fluid img-60">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item backupdb">
+                        <a class="nav-link text-center" href="#">
+                            <img src="images/icon_backup.png" class="img-fluid" style="width: 40%;"><br/> Back Up BD
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="https://dashboard.zopim.com/?lang=en-us#home" target="_new">
+                            <img src="images/icon_chat.png" class="img-fluid" style="width: 40%;"><br/>Chat Soporte
+                        </a>
+                    </li>
+                    <li class="nav-item Normalize">
+                        <a class="nav-link text-center" href="#">
+                            <img src="images/icon_normalize.png" class="img-fluid" style="width: 40%;"><br/>Normalize
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#" data-toggle='modal' data-target='#ModalUpload'>
+                            <img src="images/icon_upload.png" class="img-fluid" style="width: 40%;"><br/>Upload
+                        </a>
+                    </li>
+                    <li class="nav-item logout">
+                        <a class="nav-link text-center" href="#">
+                            <img src="images/icon_logout.png" class="img-fluid" style="width: 40%;"><br/>Log Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav><!-- Termina Nabvar --> 
+
+
+
+        <!-- =============================================
+                Sidebar / Menu Lateral
+        -->
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-sm-3 col-md-3 hidden-xs-down bg-faded sidebar" >                    
+                    <div id="accordion" role="tablist" style="width: 80%;">
+                        <!-- *********** Generos | Daily ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="list-group-item" href="" id="head_1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_biblioteca.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-10 p-2 d-flex align-items-center">
+                                                Biblioteca
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-group">
+                                <a class="list-group-item" data-toggle="collapse" href="#coll1" aria-expanded="true" aria-controls="coll1" id="head1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/generos.png" alt="" class="img-fluid d-flex" style="width: 50%;">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                Géneros &#124; Daily
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll1" class="collapse show" role="tabpanel" aria-labelledby="head1" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container daily-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Hits del Momento
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-end img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>                                                    
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->
+                                    <div class="container daily-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Inglés
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 2-->
+                                    <div class="container daily-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Español
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 3-->
+                                    <div class="container daily-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Easy Listening
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 4-->
+                                    <div class="container daily-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                RNB Soul
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 5-->
+                                    <div class="container daily-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Indie Folk
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-md-center" id="botones_agrega_elimina">
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-right: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;" data-toggle='modal' data-target='#ModalAgrega'>
+                                                    <i class="fa fa-plus fa-lg"></i>&nbsp;&nbsp;Agregar Sección
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-left: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;">
+                                                    <i class="fa fa-trash-o fa-lg"></i>&nbsp;&nbsp;Eliminar Lista
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 6-->
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Generos | Daily ******************** -->
+
+
+                        <!-- *********** Select | VIP ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="collapsed list-group-item" data-toggle="collapse" href="#coll2" aria-expanded="true" aria-controls="coll2" id="head2">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_vip.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                SELECT &#124; VIP
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll2" class="collapse" role="tabpanel" aria-labelledby="head2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container vip-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Hits del Momento
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->
+                                    <div class="container vip-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Inglés
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 2-->
+                                    <div class="container vip-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Español
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-md-center" id="botones_agrega_elimina">
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-right: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;" data-toggle='modal' data-target='#ModalAgrega'>
+                                                    <i class="fa fa-plus fa-lg"></i>&nbsp;&nbsp;Agregar Sección
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-left: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;">
+                                                    <i class="fa fa-trash-o fa-lg"></i>&nbsp;&nbsp;Eliminar Lista
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 3-->
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Select | VIP ******************** -->
+
+
+                        <!-- *********** Estacionamiento | Parking ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="collapsed list-group-item" data-toggle="collapse" href="#coll3" aria-expanded="true" aria-controls="coll3" id="head3">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_estacionamiento.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                ESTACIONAMIENTO &#124; PARKING
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll3" class="collapse" role="tabpanel" aria-labelledby="head3" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container parking-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Hits del Momento
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->
+                                    <div class="container parking-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Inglés
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 2-->
+                                    <div class="container parking-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Español
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-md-center" id="botones_agrega_elimina">
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-right: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;" data-toggle='modal' data-target='#ModalAgrega'>
+                                                    <i class="fa fa-plus fa-lg"></i>&nbsp;&nbsp;Agregar Sección
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-left: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;">
+                                                    <i class="fa fa-trash-o fa-lg"></i>&nbsp;&nbsp;Eliminar Lista
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 3-->
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Estacionamiento | Parking ******************** -->  
+
+
+                        <!-- *********** Temporalidad ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="collapsed list-group-item" data-toggle="collapse" href="#coll4" aria-expanded="true" aria-controls="coll4" id="head4">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_temporalidad.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                TEMPORALIDAD
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll4" class="collapse" role="tabpanel" aria-labelledby="head4" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container tempo-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Hits del Momento
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->
+                                    <div class="container tempo-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Inglés
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 2-->
+                                    <div class="container tempo-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Español
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-md-center" id="botones_agrega_elimina">
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-right: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;" data-toggle='modal' data-target='#ModalAgrega'>
+                                                    <i class="fa fa-plus fa-lg"></i>&nbsp;&nbsp;Agregar Sección
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-left: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;">
+                                                    <i class="fa fa-trash-o fa-lg"></i>&nbsp;&nbsp;Eliminar Lista
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 3-->
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Temporalidad ******************** --> 
+
+
+                         <!-- *********** Spots ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="collapsed list-group-item" data-toggle="collapse" href="#coll5" aria-expanded="true" aria-controls="coll5" id="head5">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_spots.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                SPOTS
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll5" class="collapse" role="tabpanel" aria-labelledby="head5" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container spots-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Hits del Momento
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->
+                                    <div class="container spots-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Inglés
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 2-->
+                                    <div class="container spots-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Español
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-md-center" id="botones_agrega_elimina">
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-right: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;" data-toggle='modal' data-target='#ModalAgrega'>
+                                                    <i class="fa fa-plus fa-lg"></i>&nbsp;&nbsp;Agregar Sección
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-left: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;">
+                                                    <i class="fa fa-trash-o fa-lg"></i>&nbsp;&nbsp;Eliminar Lista
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 3-->
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Spots ******************** -->  
+
+
+                        <!-- *********** Mac Mini Monitor ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="collapsed list-group-item" data-toggle="collapse" href="#coll6" aria-expanded="true" aria-controls="coll6" id="head6">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_mac.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                MAC MINI MONITOR
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll6" class="collapse" role="tabpanel" aria-labelledby="head6" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container mac-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Hits del Momento
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="../mac-mini-monitor/manana.php" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->
+                                    <div class="container mac-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Inglés
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 2-->
+                                    <div class="container mac-tabs">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-md-6 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                                                Pop en Español
+                                            </div>
+                                            <div class="col-md-6 d-flex align-items-center img-tabs">
+                                                <a href="" title="">
+                                                    <img src="images/icon_mañana.png" class="img-fluid img-50" alt="" title="Mañana">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_tarde.png" class="img-fluid img-50" alt="" title="Tarde">
+                                                </a>
+                                                <a href="" title="">
+                                                    <img src="images/icon_noche.png" class="img-fluid img-50" alt="" title="Noche">
+                                                </a>
+                                                <!-- Menu Opciones Dropdown -->
+                                                <div class="btn-group" role="group">
+                                                    <a href="" class="white-link" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="images/icon_dots.png" alt="" style="width: 65%;">
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item li-uno">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item li-dos">
+                                                                <a href="" class="white-link">
+                                                                    <i class="fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  
+                                                </div><!-- Cierran Opciones Dropdown -->
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-md-center" id="botones_agrega_elimina">
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-right: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;" data-toggle='modal' data-target='#ModalAgrega'>
+                                                    <i class="fa fa-plus fa-lg"></i>&nbsp;&nbsp;Agregar Sección
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 p-2 d-flex align-items-center justify-content-center f-12" style="border-left: 1px solid #333333;">
+                                                <a href="" style="color: #fff; text-decoration: none;">
+                                                    <i class="fa fa-trash-o fa-lg"></i>&nbsp;&nbsp;Eliminar Lista
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 3-->
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Mac Mini Monitor ******************** --> 
+
+                        <!-- *********** Administrador ******************** -->
+                        <div class="card">
+                            <div class="list-group">
+                                <a class="collapsed list-group-item" data-toggle="collapse" href="#coll7" aria-expanded="true" aria-controls="coll7" id="head_admin">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <img src="images/icon_admin.png" alt="" class="img-fluid d-flex img-60">
+                                            </div>
+                                            <div class="col-md-8 p-2 d-flex align-items-center">
+                                                Administrador
+                                            </div>
+                                            <div class="col col-lg-2 p-2 d-flex align-items-center">
+                                                <i class="fa fa-angle-down fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="coll7" class="collapse" role="tabpanel" aria-labelledby="head_admin" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container mac-tabs">
+                                        <div class="row justify-content-md-center" style="background: #9f80aa;">
+                                            <div class="col-md-12 d-flex align-items-start justify-content-start f-12 p-2" style="margin-left: 20px; ">
+                                                <input type="radio" class="" name="UserType" id="Administrador" value="Administrador" form="formRegistra" checked>
+                                                <span style="margin-left: 30px;">Administrador</span>
+                                            </div>                                            
+                                        </div>
+                                        <div class="row justify-content-md-center" style="border-top: 2px solid #333333; background: #9f80aa;">
+                                            <div class="col-md-12 d-flex align-items-start justify-content-start f-12 p-2" style="margin-left: 20px;">
+                                                <input type="radio" class="" name="UserType" id="Editor" value="Editor" form="formRegistra">
+                                                <span style="margin-left: 30px;">Editor</span>
+                                            </div>                                            
+                                        </div>
+                                        <div class="row justify-content-md-center" style="border-top: 2px solid #333333; background: #9f80aa;">
+                                            <div class="col-md-12 d-flex align-items-start justify-content-start f-12 p-2" style="margin-left: 20px;">
+                                                <input type="radio" class="" name="UserType" id="Invitado" value="Invitado" form="formRegistra">
+                                                <span style="margin-left: 30px;">Invitado</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="border-top: 2px solid #333333; background: #9f80aa;">
+                                            <div class="col-md-12 d-flex justify-content-center f-12 p-2">
+                                                <span>Generar Usuario y Contraseña</span>                                           
+                                            </div>
+                                            <div class="col-md-12">
+                                                <form action="" method="" id="formRegistra">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control form-control-sm" placeholder="Usuario">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control form-control-sm" placeholder="Contraseña">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btnRegisUser">Aceptar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Tab 1-->                                    
+                                </div>
+                            </div>
+                        </div><!-- *********** Termina Administrador ******************** -->                           
+                    </div><!-- Cierra Accordion -->
+                </nav>
+
+
+                <main class="col-sm-8 offset-sm-4 col-md-9 offset-md-3 pt-3">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-6 col-xs-12 d-flex align-items-center justify-content-start f-12" style="padding-left: 30px;">
+                            <span class="title-table">Biblioteca</span>
+                        </div>
+                        <div class="col-md-6 col-12 p-2 d-flex align-items-center justify-content-end">
+                            <form class="form-inline mt-2 mt-md-0">
+                                <button class="btn btn-outline-success btn-search my-sm-0" type="submit" title="Buscar">
+                                    <i class="fa fa-search fa-2x"></i>
+                                </button>
+                                <input class="form-control mr-sm-2 input-search form-control-sm" type="text">
+                            </form>
+                        </div>
+                    </div><!-- Cierra row -->
+
+                    <br><br>
+                    <div class="table-responsive">
+                        <!--<audio id="player">
+                            <source src="#" type="audio/mpeg">
+                        </audio>-->
+                        <audio id="player" src="#" type="audio/mpeg"></audio>  
+                        <table class="table table-striped table-hover table-sm">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>#</th>
+                                    <th>TRACK</th>
+                                    <th>ARTIST</th>
+                                    <th>ALBUM</th>
+                                    <th>Functions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                    <td>                                
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>
+                                                                                
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                    <td>                                        
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>
+                                                
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                    <td>                                    
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>
+                                                    
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>libero</td>
+                                    <td>Sed</td>
+                                    <td>cursus</td>
+                                    <td>ante</td>
+                                    <td>                                        
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>
+                                                
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                    <td>                                                                 
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>                             
+                                                
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                    <td>                                                                         
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>
+                                                                              
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-play-circle fa-lg btn-play"></i>
+                                    </td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                    <td>                                       
+                                        <a href='' title='' class='links-funciones' data-toggle='modal' data-target='#ModalTrack'>
+                                            <i class='fa fa-pencil-square-o fa-lg'></i>
+                                        </a>
+                                                
+                                        <a href='' title='' class='links-funcionesTR' style='margin-left: 15px;' data-toggle='modal' data-target='#ModalConfirmaEliminar'>
+                                            <i class='fa fa-trash-o fa-lg'></i>
+                                        </a>        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- Cierra Table-responsive -->
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">                        
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>                        
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>         
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>                 
+                        </ul>
+                    </nav><!-- Termina Paginacion-->
+                </main>
+            </div><!-- Cierra Row -->
+        </div><!-- Termina container-fluid -->    
+            
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+         <script   src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="js/dropzone.js"></script>
+        <script src="js/core.js"></script>
+    </body>
+</html>
+        

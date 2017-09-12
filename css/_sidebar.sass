@@ -3,14 +3,14 @@
 
 .sidebar
     position: fixed
-    top: 150px
+    top: 85px !important
     bottom: 0
     left: 0
-    z-index: 1000
+    // z-index: 1000
     padding: 20px
     overflow-x: hidden
     overflow-y: auto
-    border-right: none
+    // border-right: none
 
 
 /* Sidebar navigation */
@@ -86,7 +86,7 @@
     width: 12%
     // margin-right: 10px
 #botones_agrega_elimina
-    background-color: #9194c9
+    background-color: #9f80aa
     border-top: 2px solid #333333
     border-botttom: 2px solid #333333
 .img-tabs
@@ -95,61 +95,141 @@
 
 
 /** Item 1 - Generos Daily **/
-#head1    
-    background-color: rgb(173, 157, 51)
+#head1   
+    background-color: rgb(204, 194, 140)
     // padding-left: 10px
     padding: 0
+#head_1 
+    background-color: #9f80aa
+    padding: 0
+    border-bottom: 2px solid #333333
+
 .daily-tabs
-    background-color: rgba(173, 157, 51, .7)
+    background-color: rgba(204, 194, 140, .7)
     border-top: 2px solid #333333
 
 
 /** Item 2 - Select VIP **/
 #head2
-    background-color: rgb(187, 173, 86)
+    background-color: rgb(204, 194, 140)
     // padding-left: 10px
     padding: 0
 .vip-tabs
-    background-color: rgba(187, 173, 86, .7)
+    background-color: rgba(204, 194, 140, .7)
     border-top: 2px solid #333333  
 
 
 /** Item 3 - Estacionamiento | Parking **/
 #head3
-    background-color: rgb(204, 189, 124)
+    background-color: rgb(204, 194, 140)
     // padding-left: 10px
     padding: 0
 .parking-tabs
-    background-color: rgba(204, 189, 124, .7)
+    background-color: rgba(204, 194, 140, .7)
     border-top: 2px solid #333333    
 
 
 /** Item 4 - Temporalidad **/
 #head4
-    background-color: rgb(138, 193, 188)
+    background-color: rgb(142, 202, 203)
     // padding-left: 10px
     padding: 0
 .tempo-tabs
-    background-color: rgba(138, 193, 188, .7)
+    background-color: rgba(142, 202, 203, .7)
     border-top: 2px solid #333333 
 
 
 /** Item 5 - Spots **/
 #head5
-    background-color: rgb(98, 176, 169)
+    background-color: rgb(142, 202, 203)
     // padding-left: 10px
     padding: 0
 .spots-tabs
-    background-color: rgba(98, 176, 169, .7)
+    background-color: rgba(142, 202, 203, .7)
     border-top: 2px solid #333333 
 
 
 /** Item 6 - Mac Mini Monitor **/
 #head6
-    background-color: rgb(39, 162, 154)
+    background-color: rgb(142, 202, 203)
     // padding-left: 10px
     padding: 0
 .mac-tabs
-    background-color: rgba(39, 162, 154, .7)
+    background-color: rgba(142, 202, 203, .7)
     border-top: 2px solid #333333          
 
+
+/** Item 7 - Administrador **/
+#head_admin   
+    background-color: rgb(159, 128, 170)
+    // padding-left: 10px
+    padding: 0
+
+
+
+/** ==============================  Para los menus al dar click */
+.dropdown-menu
+    position: absolute
+    top: -10px
+    left: 140%
+    z-index: 10000 !important
+    display: none
+    float: left
+    min-width: 10rem
+    padding: 0 !important
+    margin: .125rem 0 0
+    font-size: 1rem
+    color: #292b2c
+    text-align: left
+    list-style: none
+    background-color: transparent
+    -webkit-background-clip: padding-box
+    background-clip: padding-box
+    border: 1px solid rgba(0,0,0,.15)
+    border-radius: 0
+
+.dropdown-item
+    // display: inline-block
+    width: 100%
+    z-index: 10000 !important
+    float: left
+    padding: 3px 1.5rem
+    // clear: both
+    font-weight: 400
+    color: #292b2c
+    text-align: inherit
+    white-space: nowrap
+    background: 0 0
+    border: 0
+.li-uno
+    margin-right: 0 !important
+    background-color: #9194c9
+    padding: 6px 10px
+    box-sizing: border-box
+    border-top: 1px solid #333333
+    z-index: 9000 !important
+.li-dos
+    background-color: #9194c9
+    padding: 6px 10px
+    box-sizing: border-box
+    border-top: 1px solid #333333
+    z-index: 9000 !important
+.list-inline-item:not(:last-child)
+    margin-right: 0
+
+/** formRegistra */
+#formRegistra
+    input
+        display: block
+        margin: auto
+        width: 80%
+.btnRegisUser
+    display: block
+    margin: auto
+    background-color: #8ecacb
+    color: #fff
+    text-transform: uppercase
+    font-size: 12px
+    padding: 3px 20px
+    border: 1px solid #8ecacb !important
+    cursor: pointer
